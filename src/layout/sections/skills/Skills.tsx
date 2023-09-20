@@ -1,0 +1,32 @@
+import React from 'react';
+import styled, {css} from 'styled-components';
+import { FlexWrapper } from '../../../components/FlexWrapper';
+import { SectionTitle } from '../../../components/SectionTitle';
+import { Skill } from './skill/Skill';
+
+
+
+export const Skills = () => {
+  return (
+    <StyledSkills>
+      <SectionTitle>My Skills</SectionTitle>
+      <FlexWrapper wrap='wrap' justify='space-around' align='center'>
+        <Skill iconId='css' title='CSS'></Skill>
+        <Skill iconId='html' title='HTML'></Skill>
+        <Skill iconId='react' title='REACT'></Skill>
+        <Skill iconId='style' title='STYLE COMPONENTS'></Skill>
+        <Skill iconId='ts' title='Typesript'></Skill>
+        <Skill iconId='web' title='WEB DESIGN' ></Skill>
+      </FlexWrapper>
+
+    </StyledSkills>
+  );
+};
+
+
+
+const StyledSkills = styled.section`
+  min-height: 570px; 
+  background-color: bisque;
+
+`
