@@ -1,21 +1,26 @@
 import styled, {css} from 'styled-components';
 
 type PropsBtnPropsType = {
-  btnType: string
+  styleType?: 'outlined' | 'filled',
+  type: string
 }
 
-export const StyledButton = styled.button<PropsBtnPropsType>`
+export const Button = styled.button<PropsBtnPropsType>`
   background-color: aliceblue;
 
-  ${props => props.btnType === 'outlined' && css<PropsBtnPropsType>`
+  ${props => props.styleType === 'outlined' && css<PropsBtnPropsType>`
     background-color: transparent;
     border: 1px solid 'pink';
 
   `
   }
 
-  ${props => props.btnType === 'filled' && css<PropsBtnPropsType>`
+  ${props => props.styleType === 'filled' && css<PropsBtnPropsType>`
   background-color: pink;
 
   `}
+`
+
+export const SubmitButton = styled(Button)`
+  width: 100%;
 `

@@ -2,7 +2,7 @@ import React from 'react';
 import photo from '../../../assets/images/photo.webp'
 import styled from 'styled-components';
 import { FlexWrapper } from '../../../components/FlexWrapper';
-import { StyledButton } from '../../../components/Button';
+import { Button } from '../../../components/Button';
 
 export const Main = () => {
   return (
@@ -14,7 +14,7 @@ export const Main = () => {
             <StyledName>Anastasiya Kalesnikava</StyledName>
             <StyledMainTitle>Frontend Developer</StyledMainTitle>
           </div>
-          <StyledButton btnType='outlined'>Get in Touch</StyledButton>
+          <Button styleType='outlined' type='button'>Get in Touch</Button>
         </div>
         <StyledPhoto src={photo} alt="photo" />
       </FlexWrapper>
