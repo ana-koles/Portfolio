@@ -8,14 +8,14 @@ export const Main = () => {
   return (
     <StyledMain>
       <FlexWrapper justify='space-around' align='center'>
-        <div>
-          <div>
+        <ContentWrapper>
+          <TextWrapper>
             <span>Hi Everyone!</span>
             <StyledName>Anastasiya Kalesnikava</StyledName>
             <StyledMainTitle>Frontend Developer</StyledMainTitle>
-          </div>
+          </TextWrapper>
           <Button styleType='outlined' type='button'>Get in Touch</Button>
-        </div>
+        </ContentWrapper>
         <StyledPhoto src={photo} alt="photo" />
       </FlexWrapper>
     </StyledMain>
@@ -26,6 +26,17 @@ const StyledMain = styled.section`
   background-color: beige;
   min-height: 760px;
 `
+
+const ContentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+const TextWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+`
+
 
 type StyledPhotoPropsType = {
   src: string,

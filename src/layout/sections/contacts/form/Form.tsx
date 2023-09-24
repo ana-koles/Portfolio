@@ -8,12 +8,12 @@ export const Form = () => {
   return (
     <StyledForm>
       <FlexWrapper wrap={'wrap'} justify='space-between'>
-        <Input placeholder={'Name'}/>
-        <Input placeholder={'Email Address'}/>
-        <Input placeholder={'Subject'}/>
-        <Input placeholder={'Phone'}/>
+        <Input type={'text'} placeholder={'Name'}/>
+        <Input type={'email'} placeholder={'Email Address'}/>
+        <Input type={'text'} placeholder={'Subject'}/>
+        <Input type={'text'} placeholder={'Phone'}/>
       </FlexWrapper>
-      <Input as={"textarea"} placeholder={'Your message'}/>
+      <TextArea placeholder={'Your message'}/>
       <SubmitButton type={'submit'} styleType='outlined'>Send message</SubmitButton>
   </StyledForm>
   );
@@ -25,17 +25,20 @@ const StyledForm = styled.div`
 `
 
 type InputPropsType = {
-  as: 'textarea' | 'input'
+  type?: string | null,
+  placeholder: string
 }
 
-const Input = styled.input<InputPropsType>`
+const Input = styled.input.attrs<InputPropsType>((props) => ({
+  placeholder: props.type || 'Please fill'
+}))`
   width: 47%;
   border: 1px solid pink;
 
-  ${props => props.as === 'textarea' && css<InputPropsType>`
-    width: 100%;
-    height: 135px;
-  `}
+`
 
+const TextArea = styled.textarea `
+  width: 100%;
+  height: 135px;
 `
 

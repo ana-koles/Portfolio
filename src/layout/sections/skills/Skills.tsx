@@ -13,10 +13,10 @@ export const Skills = () => {
       <FlexWrapper wrap='wrap' justify='space-around' align='center'>
         <Skill iconId='css' title='CSS'></Skill>
         <Skill iconId='html' title='HTML'></Skill>
-        <Skill iconId='react' title='REACT'></Skill>
-        <Skill iconId='style' title='STYLE COMPONENTS'></Skill>
+        <Skill iconId='react' title='React'></Skill>
+        <Skill iconId='style' title='Style Components'></Skill>
         <Skill iconId='ts' title='Typesript'></Skill>
-        <Skill iconId='web' title='WEB DESIGN' ></Skill>
+        <Skill iconId='web' title='Web Design' ></Skill>
       </FlexWrapper>
 
     </StyledSkills>
@@ -26,7 +26,7 @@ export const Skills = () => {
 
 
 const StyledSkills = styled.section`
-  min-height: 570px; 
+  min-height: 570px;
   background-color: bisque;
 
 `

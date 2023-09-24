@@ -26,5 +26,6 @@ const StyledMenu = styled.nav`
     align-items: center;
     justify-content: center;
     gap: 50px;
+    list-style: none;
   }
 `

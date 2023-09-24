@@ -29,6 +29,12 @@ const ContentWrapper = styled.div`
   width: 60%;
   margin-left: 100px;
 
+  button + button {
+      margin-left: 20px;
+    }
+
+
+
 `
 
 const Text = styled.p`

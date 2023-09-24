@@ -1,22 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FlexWrapper } from '../../../components/FlexWrapper';
-import { SectionTitle } from '../../../components/SectionTitle';
-import { Form } from './form/Form';
 import { Icon } from '../../../components/icon/Icon';
 
 export const Footer = () => {
   return (
     <StyledFooter>
-      <FlexWrapper direction={'column'} justify='center' align={'center'}>
-        <FlexWrapper justify={'space-between'} align={'center'}>
-          <TextWrapper>
-            <FooterTitle>I`m available for a exciting new project. Let`s Talk.</FooterTitle>
-            <Text>You can send me a message here OR contact me on any social networks. We can grab a coffee and talk it over a phone.</Text>
-          </TextWrapper>
-          <Form/>
-        </FlexWrapper>
-
+      <FlexWrapper direction='column' align='center'>
         <ContactsWrapper>
           <FlexWrapper>
             <Icon iconId={'phone'} height={'24px'} width={'24px'} viewBox={'0 0 24px 24px'}/>
@@ -47,32 +37,18 @@ export const Footer = () => {
               <Icon iconId={'linkedin'} height={'35px'} width={'35px'} viewBox={'0 0 35px 35px'}/>
             </SolialIconLink>
           </SocialIconItem>
-
         </SocialIconList>
 
         <Copyright>© 2023 Anastasiya Kalesnikava, All Rights Reserved.</Copyright>
       </FlexWrapper>
-    </StyledFooter>
+
+      </StyledFooter>
   );
 };
 
 const StyledFooter = styled.section`
-  min-height: 680px;
-  background-color: #d5c1e8;
-`
-
-const TextWrapper = styled.div`
-  max-width: 55%;
-`
-
-const FooterTitle = styled.h4`
-  font-size: 40px;
-  text-align: start;
-`
-
-const Text = styled.p`
-  font-size: 16px;
-  text-align: start;
+  min-height: 200px;
+  background-color: #ded1eb;
 `
 
 const ContactsWrapper = styled.div`
@@ -84,7 +60,12 @@ const ContactsWrapper = styled.div`
 const SocialIconList = styled.ul`
   display: flex;
   gap: 65px;
+  list-style: none;
+`
 
+const Text = styled.p`
+  font-size: 16px;
+  text-align: start;
 `
 
 const SocialIconItem = styled.li`
