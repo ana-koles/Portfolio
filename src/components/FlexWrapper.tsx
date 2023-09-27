@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 
+
 type FlexWrapperPropsType = {
   direction?: string,
   wrap?: string,
   justify?: string,
-  align?: string
+  align?: string,
+
 }
 
 export const FlexWrapper = styled.div<FlexWrapperPropsType>`
@@ -16,4 +18,5 @@ export const FlexWrapper = styled.div<FlexWrapperPropsType>`
   border: 1px solid blue;
   height: 100%;
   width: 100%;
+
 `

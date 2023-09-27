@@ -22,6 +22,7 @@ export const Menu = (props: MenuPropsType) => {
 
 const StyledMenu = styled.nav`
   height: 100%;
+
   ul {
     display: flex;
     flex-direction: row;
@@ -33,7 +34,7 @@ const StyledMenu = styled.nav`
 `
 
 const Link = styled.a`
-
+  font-size: 16px;
 `
 
 const ListItem = styled.li`

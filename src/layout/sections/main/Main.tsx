@@ -115,14 +115,15 @@ const PhotoWrapper = styled.div`
   position: relative;
   z-index: 1;
 
-  ::before {
+  &::before {
     content: "";
+    display: block;
     width: 445px;
     height: 445px;
-    background-color: red;
+    background-color: ${Thema.colors.primaryBg};
     position: absolute;
     left: -20px;
-    transform: rotate(15deg);
+    transform: rotate(-7deg);
     z-index: 0;
   }
 `

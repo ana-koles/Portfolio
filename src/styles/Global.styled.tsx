@@ -56,10 +56,15 @@ export const GlobalStyles = createGlobalStyle`
 
   a {
     text-decoration: none;
+    color: ${Thema.colors.text}
   }
 
   ul {
     list-style: none;
+  }
+
+  section {
+    padding: 85px 0;
   }
 
   section:nth-of-type(even) {

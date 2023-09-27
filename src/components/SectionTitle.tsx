@@ -7,6 +7,7 @@ export const SectionTitle = styled.h2`
   font-weight: 800;
   letter-spacing: 0.3px;
   text-align: center;
+  margin-bottom: 70px;
 `
 
 export const SectionAboutTitle = styled(SectionTitle)`

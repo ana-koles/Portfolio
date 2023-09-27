@@ -34,7 +34,6 @@ const HeadWrapper = styled.div`
   flex-direction: column;
   height: 100%;
   justify-content: start;
-  padding-top: 85px;
 `
 
 const ContentWrapper = styled.div`

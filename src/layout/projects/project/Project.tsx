@@ -23,6 +23,7 @@ const StyledProject = styled.div`
   background-color: lightgreen;
   max-width: 930px;
   width: 100%;
+  margin-bottom: 50px;
 
 `
 
