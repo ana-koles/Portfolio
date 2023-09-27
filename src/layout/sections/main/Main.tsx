@@ -12,14 +12,14 @@ export const Main = () => {
       <Container>
         <FlexWrapper align='center'>
           <ContentWrapper>
-            
+
             <TextContent>
               <StyledSpan>Hi Everyone!</StyledSpan>
               <StyledMainContent>
                 <StyledName>Anastasiya Kalesni<span>kava</span></StyledName>
                 <StyledMainTitle>Frontend Developer</StyledMainTitle>
               </StyledMainContent>
-              <StyledText>Make designs mainly logos, visual identities, apps & websites, social media and magazines.</StyledText>
+              <Text>Make designs mainly logos, visual identities, apps & websites, social media and magazines.</Text>
               <Button styleType='outlined' type='button'>Get in Touch</Button>
             </TextContent>
 
@@ -98,7 +98,7 @@ const StyledName = styled.h2`
   }
 `
 
-const StyledText = styled.p`
+const Text = styled.p`
   font-size: 20px;
   width: 60%;
   line-height: 2;

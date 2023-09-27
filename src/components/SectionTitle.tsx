@@ -1,11 +1,14 @@
 import styled from 'styled-components';
+import { Thema } from '../styles/Thema';
 
 export const SectionTitle = styled.h2`
+  font-family: 'Epilogue', sans-serif;
   font-size: 50px;
-  color: #730f0f;
-  font-style: normal;
   font-weight: 800;
-  line-height: 120%;
   letter-spacing: 0.3px;
   text-align: center;
+`
+
+export const SectionAboutTitle = styled(SectionTitle)`
+  text-align: left;
 `
