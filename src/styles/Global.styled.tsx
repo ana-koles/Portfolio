@@ -50,6 +50,7 @@ export const GlobalStyles = createGlobalStyle`
     font-weight: 400;
     font-style: normal;
     color: ${Thema.colors.text};
+    line-height: 1.2;
   }
 
   a {
@@ -72,6 +73,8 @@ export const GlobalStyles = createGlobalStyle`
   section:last-of-type {
     background-color: ${Thema.colors.accent};
   }
+
+
 
 
 

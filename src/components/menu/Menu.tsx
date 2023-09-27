@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Thema } from '../../styles/Thema';
 
 type MenuPropsType = {
   menuItems: Array<string>
@@ -10,9 +11,9 @@ export const Menu = (props: MenuPropsType) => {
     <StyledMenu>
         <ul>
           {props.menuItems.map((item: string, index: number) => {
-              return  <li key={index}>
-                        <a href="">{item}</a>
-                      </li>
+              return  <ListItem key={index}>
+                        <Link href="">{item}</Link>
+                      </ListItem>
             })}
         </ul>
       </StyledMenu>
@@ -20,6 +21,7 @@ export const Menu = (props: MenuPropsType) => {
 };
 
 const StyledMenu = styled.nav`
+  height: 100%;
   ul {
     display: flex;
     flex-direction: row;
@@ -28,4 +30,42 @@ const StyledMenu = styled.nav`
     gap: 50px;
     list-style: none;
   }
+`
+
+const Link = styled.a`
+
+`
+
+const ListItem = styled.li`
+  display: flex;
+  height: 40px;
+  min-width: 100px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: ${Thema.colors.accent};
+    transition: left 0.7s, background-color 0.7s;
+  }
+
+  &:hover::before {
+    left: 0;
+    width: 100%;
+    background-color: ${Thema.colors.accent};
+  }
+
+  &:hover ${Link} {
+    color: white;
+    z-index: 1;
+  }
+
 `
