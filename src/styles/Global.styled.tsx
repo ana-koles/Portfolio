@@ -42,7 +42,7 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     margin: 0;
-    font-family: Manrope, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
       sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -50,6 +50,7 @@ export const GlobalStyles = createGlobalStyle`
     font-weight: 400;
     font-style: normal;
     color: ${Thema.colors.text};
+    font-size: 10px;
     line-height: 1.2;
   }
 
@@ -61,11 +62,6 @@ export const GlobalStyles = createGlobalStyle`
     list-style: none;
   }
 
-  button {
-    background-color: unset;
-    border: none;
-  }
-
   section:nth-of-type(even) {
     background-color: ${Thema.colors.primaryBg};
   }
@@ -73,7 +69,6 @@ export const GlobalStyles = createGlobalStyle`
   section:last-of-type {
     background-color: ${Thema.colors.accent};
   }
-
 
 
 

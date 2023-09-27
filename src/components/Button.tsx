@@ -1,4 +1,5 @@
 import styled, {css} from 'styled-components';
+import { Thema } from '../styles/Thema';
 
 type PropsBtnPropsType = {
   styleType?: 'outlined' | 'filled',
@@ -10,14 +11,13 @@ export const Button = styled.button<PropsBtnPropsType>`
 
   ${props => props.styleType === 'outlined' && css<PropsBtnPropsType>`
     background-color: transparent;
-    border: 1px solid 'pink';
+    border: 1px solid ${Thema.colors.accent};
 
   `
   }
 
   ${props => props.styleType === 'filled' && css<PropsBtnPropsType>`
-  background-color: pink;
-
+  background-color: ${Thema.colors.accent};
   `}
 `
 
