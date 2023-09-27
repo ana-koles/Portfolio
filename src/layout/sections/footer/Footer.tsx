@@ -46,7 +46,7 @@ export const Footer = () => {
   );
 };
 
-const StyledFooter = styled.section`
+const StyledFooter = styled.footer`
   min-height: 200px;
   background-color: #ded1eb;
 `
