@@ -41,5 +41,24 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-plugin-macros": "^3.1.0",
+    "babel-plugin-styled-components": "^2.1.4"
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ],
+    "plugins": [
+      [
+        "babel-plugin-styled-components",
+        {
+          "namespace": "my-styled-components-project",
+          "displayName": true,
+          "fileName": false
+        }
+      ]
+    ]
   }
 }

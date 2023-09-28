@@ -11,7 +11,7 @@ import shelter from '../../assets/images/proejct32.webp'
 import { Button } from '../../components/Button';
 import { Container } from '../../components/Container';
 
-const projectItems = ['All', 'Landing Page', 'Reach', 'Javascript']
+const projectItems = ['All', 'Landing', 'Reach', 'Javascript']
 
 export const Projects = () => {
   return (
@@ -33,7 +33,7 @@ export const Projects = () => {
 };
 
 const StyledProjects = styled.section`
-  min-height: 100vh;
+
 `
 
 const ProjectWrapper = styled.div`
