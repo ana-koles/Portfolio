@@ -9,9 +9,9 @@ export const Form = () => {
   return (
     <StyledForm>
       <FlexWrapper wrap={'wrap'} justify='space-between'>
-        <Input type={'text'} placeholder={'Name'}/>
-        <Input type={'email'} placeholder={'Email Address'}/>
-        <Input type={'text'} placeholder={'Subject'}/>
+        <Input type={'text'} placeholder={'Name*'}/>
+        <Input type={'email'} placeholder={'Email Address*'}/>
+        <Input type={'text'} placeholder={'Subject*'}/>
         <Input type={'text'} placeholder={'Phone'}/>
       </FlexWrapper>
       <TextArea placeholder={'Your message'}/>
@@ -46,11 +46,11 @@ const StyledForm = styled.div`
 
 type InputPropsType = {
   type?: string | null,
-  placeholder: string
+  placeholder: string,
 }
 
 const Input = styled.input.attrs<InputPropsType>((props) => ({
-  placeholder: props.type || 'Please fill'
+  placeholder: props.placeholder || 'Please fill'
 }))`
   border: 1px solid pink;
   width: calc(50% - 0.5rem);
