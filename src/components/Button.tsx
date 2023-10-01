@@ -28,6 +28,3 @@ export const Button = styled.button<PropsBtnPropsType>`
   `}
 `
 
-export const SubmitButton = styled(Button)`
-  width: 100%;
-`

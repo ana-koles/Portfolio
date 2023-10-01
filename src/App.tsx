@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { Main } from './layout/sections/main/Main';
 import { Skills } from './layout/sections/skills/Skills';
 import { Projects } from './layout/projects/Projects';
-import { Footer } from './layout/sections/footer/Footer';
+import { Footer } from './layout/footer/Footer';
 import { About } from './layout/sections/about/About';
 import { Contacts } from './layout/sections/contacts/Contacts';
 

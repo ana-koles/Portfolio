@@ -1,7 +1,8 @@
 import React from 'react';
 import styled, {css} from 'styled-components';
 import { FlexWrapper } from '../../../../components/FlexWrapper';
-import { SubmitButton } from '../../../../components/Button';
+import { Button } from '../../../../components/Button';
+import { Thema } from '../../../../styles/Thema';
 
 
 export const Form = () => {
@@ -14,14 +15,33 @@ export const Form = () => {
         <Input type={'text'} placeholder={'Phone'}/>
       </FlexWrapper>
       <TextArea placeholder={'Your message'}/>
-      <SubmitButton type={'submit'} styleType='outlined'>Send message</SubmitButton>
+      <Button type={'submit'} styleType='outlined'>Send message</Button>
   </StyledForm>
   );
 };
 
 
 const StyledForm = styled.div`
-  max-width: 40%;
+  margin-left: 30px;
+
+  button {
+    width: 100%;
+    border-color: ${Thema.colors.secondaryColor};
+    color: ${Thema.colors.secondaryColor};
+    text-align: left;
+    padding: 10px;
+
+  }
+
+  input,
+  textarea {
+    color: ${Thema.colors.placeholderColor};
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    padding: 17px;
+    font-family: 'Manrope', sans-serif;
+    margin-bottom: 5px;
+  }
 `
 
 type InputPropsType = {
@@ -32,13 +52,28 @@ type InputPropsType = {
 const Input = styled.input.attrs<InputPropsType>((props) => ({
   placeholder: props.type || 'Please fill'
 }))`
-  width: 47%;
   border: 1px solid pink;
+  width: calc(50% - 0.5rem);
+
+  &:nth-child(even) {
+    margin-left: 0.5rem;
+  }
+
+  &:focus-visible {
+    outline: 2px solid ${Thema.colors.contactsTextColor};
+  }
 
 `
 
-const TextArea = styled.textarea `
+
+const TextArea = styled.textarea`
   width: 100%;
   height: 135px;
+  resize: none;
+  border: none;
+
+  &:focus-visible {
+    outline: 2px solid ${Thema.colors.contactsTextColor};
+  }
 `
 

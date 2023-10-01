@@ -10,6 +10,7 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 10px;
   }
 
   @font-face {
@@ -52,11 +53,13 @@ export const GlobalStyles = createGlobalStyle`
     color: ${Thema.colors.text};
     font-size: 10px;
     line-height: 1.2;
+
   }
 
   a {
     text-decoration: none;
-    color: ${Thema.colors.text}
+    color: ${Thema.colors.text};
+    cursor: pointer;
   }
 
   ul {
@@ -73,6 +76,10 @@ export const GlobalStyles = createGlobalStyle`
 
   section:last-of-type {
     background-color: ${Thema.colors.accent};
+  }
+
+  button {
+    cursor: pointer;
   }
 
 
