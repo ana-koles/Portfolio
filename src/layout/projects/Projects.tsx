@@ -33,7 +33,10 @@ export const Projects = () => {
 };
 
 const StyledProjects = styled.section`
-
+  button {
+    width: 175px;
+    height: 57px;
+  }
 `
 
 const ProjectWrapper = styled.div`

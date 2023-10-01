@@ -27,19 +27,12 @@ const StyledSkill = styled.div`
 
 const IconWrapper = styled.div`
   position: relative;
-
-  &::before {
-    content: '';
-    position: absolute;
-    display: inline-block;
-    width: 80px;
-    height: 80px;
-    border: 1px solid ${Thema.colors.accent};
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-
-  }
+  width: 80px;
+  height: 80px;
+  border: 1px solid ${Thema.colors.accent};
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 const SkillTitle = styled.h3`

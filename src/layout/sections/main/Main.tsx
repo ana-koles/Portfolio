@@ -109,11 +109,6 @@ const Text = styled.p`
 const OuterWrapper = styled.div`
   position: absolute;
   right: 25px;
-`
-
-const PhotoWrapper = styled.div`
-  position: relative;
-  z-index: 1;
 
   &::before {
     content: "";
@@ -128,16 +123,38 @@ const PhotoWrapper = styled.div`
   }
 `
 
+const PhotoWrapper = styled.div`
+  position: relative;
+  z-index: 1;
+  height: 445px;
+  width: 445px;
+
+  transform: rotate(7.5deg);
+  overflow: hidden;
+
+  /* &::before {
+    content: "";
+    display: block;
+    width: 445px;
+    height: 445px;
+    background-color: ${Thema.colors.primaryBg};
+    position: absolute;
+    left: -20px;
+    transform: rotate(-7deg);
+    z-index: 0;
+  } */
+`
+
 type StyledPhotoPropsType = {
   src: string,
   alt: string,
 }
 
 const StyledPhoto = styled.img<StyledPhotoPropsType>`
-  height: 445px;
-  width: 445px;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
-  transform: rotate(7deg);
+  transform: scale(1.7) translateY(70px) translateX(20px)
 
 `
 
