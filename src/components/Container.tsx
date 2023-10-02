@@ -6,7 +6,6 @@ export const Container = styled.div`
   min-height: 100%; /* have to be at least 100% height of the parent; */
   padding: 0 15px; /* for mobile */
   margin: 0 auto;
-  outline: 1px solid red;
   display: flex;
   flex-direction: column;
   align-items: center;

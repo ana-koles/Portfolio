@@ -55,8 +55,7 @@ const Link = styled.a`
   text-transform: capitalize;
 
   &:hover {
-    padding-bottom: 9px;
-    border-bottom: ${Thema.colors.linkColor};
+    text-decoration: underline;
   }
 
 `

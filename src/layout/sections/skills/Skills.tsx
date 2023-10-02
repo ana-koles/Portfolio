@@ -22,13 +22,13 @@ export const Skills = () => {
       <Container>
         <SectionTitle>My Skills</SectionTitle>
         <FlexWrapper wrap='wrap' justify='space-between'>
-          <Skill iconId='css' title='CSS'></Skill>
-          <Skill iconId='html' title='HTML'></Skill>
-          <Skill iconId='react' title='React'></Skill>
-          <Skill iconId='style' title='Style Components'></Skill>
-          <Skill iconId='ts' title='Typesript'></Skill>
-          <Skill iconId='web' title='Web Design' ></Skill>
-          
+          <Skill iconId='css' title='CSS' text='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim'></Skill>
+          <Skill iconId='html' title='HTML' text='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim'></Skill>
+          <Skill iconId='react' title='React' text='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim'></Skill>
+          <Skill iconId='style' title='Style Components' text='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim'></Skill>
+          <Skill iconId='ts' title='Typesript' text='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim'></Skill>
+          <Skill iconId='web' title='Web Design' text='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim'></Skill>
+
         </FlexWrapper>
       </Container>
 
@@ -41,7 +41,6 @@ export const Skills = () => {
 
 const StyledSkills = styled.section`
   ${FlexWrapper} {
-    padding-top: 50px;
     gap: 80px;
   }
 `

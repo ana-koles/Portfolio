@@ -5,7 +5,8 @@ import { Thema } from '../../../../styles/Thema';
 
 type SkillPropsType = {
   iconId: string,
-  title: string
+  title: string,
+  text: string,
 }
 
 export const Skill = (props: SkillPropsType) => {
@@ -15,6 +16,7 @@ export const Skill = (props: SkillPropsType) => {
         <Icon iconId={props.iconId}></Icon>
       </IconWrapper>
       <SkillTitle>{props.title}</SkillTitle>
+      <Text>{props.text}</Text>
     </StyledSkill>
   );
 };
@@ -23,6 +25,7 @@ const StyledSkill = styled.div`
   width: 25%;
   display: flex;
   align-items: center;
+  flex-direction: column;
 `
 
 const IconWrapper = styled.div`
@@ -36,10 +39,13 @@ const IconWrapper = styled.div`
 `
 
 const SkillTitle = styled.h3`
-  font-size: 16px;
-  margin-left: 40px;
-  font-size: 16px;
+  margin: 20px 0px 15px;
+  font-size: 1.6rem;
   font-weight: 800;
   text-transform: uppercase;
 `
 
+const Text = styled.p`
+  font-size: 1.4rem;
+  text-align: center;
+`

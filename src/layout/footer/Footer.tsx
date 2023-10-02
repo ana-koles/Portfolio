@@ -61,6 +61,9 @@ const ContactsWrapper = styled.div`
   margin-top: 50px;
   gap: 40px;
 
+  svg:last-of-type {
+    padding-top: 5px;
+  }
 
 `
 
@@ -74,7 +77,7 @@ const SocialIconList = styled.ul`
 const Text = styled.p`
   font-size: 2rem;
   text-align: start;
-  margin-right: 18px;
+  margin-left: 18px;
   color: ${Thema.colors.contactsTextColor};
 
 `
