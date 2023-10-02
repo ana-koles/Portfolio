@@ -9,14 +9,14 @@ type MenuPropsType = {
 export const Menu = (props: MenuPropsType) => {
   return (
     <StyledMenu>
-        <ul>
-          {props.menuItems.map((item: string, index: number) => {
-              return  <ListItem key={index}>
-                        <Link href="">{item}</Link>
-                      </ListItem>
-            })}
-        </ul>
-      </StyledMenu>
+      <ul>
+        {props.menuItems.map((item: string, index: number) => {
+            return  <ListItem key={index}>
+                      <Link href="">{item}</Link>
+                    </ListItem>
+          })}
+      </ul>
+    </StyledMenu>
   );
 };
 
@@ -29,7 +29,10 @@ const StyledMenu = styled.nav`
     align-items: center;
     justify-content: center;
     gap: 50px;
-    list-style: none;
+  }
+
+  @media ${Thema.media.mobile} {
+    display: none;
   }
 `
 
