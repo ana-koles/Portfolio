@@ -10,7 +10,7 @@ export const Main = () => {
   return (
     <StyledMain>
       <Container>
-        <FlexWrapper align='center'>
+        <FlexWrapper align='center' wrap='wrap'>
           <ContentWrapper>
 
             <TextContent>
@@ -47,6 +47,10 @@ const ContentWrapper = styled.div`
   position: relative;
   z-index: 10;
   width: 100%;
+
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+  }
 `
 
 const TextContent = styled.div`
@@ -120,6 +124,15 @@ const OuterWrapper = styled.div`
     left: -20px;
     transform: rotate(-7deg);
     z-index: 0;
+
+    @media screen and (max-width: 1200px) {
+      left: 200px;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    position: relative;
+    top: 100px;
   }
 `
 

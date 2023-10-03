@@ -1,7 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 import { Thema } from '../../../styles/Thema';
-import { Button } from '../../../components/Button';
+
 
 
 type MobileMenuPropsType = {
@@ -12,12 +12,11 @@ export const MobileMenu = (props: MobileMenuPropsType) => {
   return (
     <StyledMobileMenu>
 
-      <BurgerButton>
+      <BurgerButton isOpen={true}>
         <span></span>
-
       </BurgerButton>
 
-      <MobileMenuPopup>
+      <MobileMenuPopup isOpen={true}>
         <ul>
           {props.menuItems.map((item: string, index: number) => {
               return  <ListItem key={index}>
@@ -27,64 +26,94 @@ export const MobileMenu = (props: MobileMenuPropsType) => {
         </ul>
       </MobileMenuPopup>
 
-
     </StyledMobileMenu>
   );
 };
 
 const StyledMobileMenu = styled.nav`
-  height: 100%;
+  display: none;
 
   @media ${Thema.media.mobile} {
-    display: none;
+    display: block;
   }
 `
 
-const BurgerButton = styled.button`
+const BurgerButton = styled.button<{isOpen: boolean}>`
   position: fixed;
-  width: 30px;
-  height: 22px;
-  right: 20px;
-  top: 20px;
+  width: 50px;
+  height: 50px;
+  right: 0px;
+  top: 0px;
+  z-index: 100;
+  background-color: transparent;
+  border: none;
 
   span{
     display: block;
     width: 30px;
     height: 2px;
-    color: ${Thema.colors.primaryBg};
+    background-color: ${Thema.colors.primaryBg};
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 30px;
+    bottom: 10px;
+
+    ${props => props.isOpen && css<{isOpen:boolean}>`
+      background-color: rgba(255, 255, 255, 0);
+    `}
 
     &::before {
+      content: '';
       display: block;
       width: 20px;
       height: 2px;
-      color: ${Thema.colors.primaryBg};
+      background-color: ${Thema.colors.primaryBg};
       position: absolute;
       transform: translateY(-10px);
+
+      ${props => props.isOpen && css<{isOpen:boolean}>`
+        transform: rotate(-45deg) translateY(0);
+        width: 30px;
+      `
+      }
     }
 
     &::after {
+      content: '';
       display: block;
       width: 20px;
       height: 2px;
-      color: ${Thema.colors.primaryBg};
+      background-color: ${Thema.colors.primaryBg};
       position: absolute;
       transform: translateY(10px);
+
+      ${props => props.isOpen && css<{isOpen:boolean}>`
+        transform: rotate(45deg) translateY(0);
+        width: 30px;
+      `
+      }
     }
   }
 `
 
-const MobileMenuPopup = styled.div`
+const MobileMenuPopup = styled.div<{isOpen: boolean}>`
   position: fixed;
-  right: 0;
   top: 0;
   background-color: ${Thema.colors.accent};
   width: 320px;
   bottom: 0;
-/*   right: 0; */
+  right: 0;
   z-index: 50;
+
+  display: none; //value by default
+
+  ${props => props.isOpen && css<{isOpen: boolean}>`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  `
+  }
+
 
   ul {
     display: flex;
@@ -96,6 +125,11 @@ const MobileMenuPopup = styled.div`
 
 const Link = styled.a`
   font-size: 16px;
+
+  @media ${Thema.media.mobile} {
+    color: ${Thema.colors.secondaryColor};
+    font-size: 2rem;
+  }
 `
 
 const ListItem = styled.li`
@@ -128,6 +162,26 @@ const ListItem = styled.li`
   &:hover ${Link} {
     color: white;
     z-index: 1;
+  }
+
+  @media ${Thema.media.mobile} {
+    margin-bottom: 30px;
+
+    &::before {
+    content: '';
+    background-color: ${Thema.colors.secondaryColor};
+  }
+
+    &:hover::before {
+      left: 0;
+      width: 100%;
+      background-color: ${Thema.colors.secondaryColor};
+    }
+
+    &:hover ${Link} {
+      color: ${Thema.colors.text};
+      z-index: 1;
+    }
   }
 
 `
