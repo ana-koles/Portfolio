@@ -4,6 +4,7 @@ import { FlexWrapper } from '../../../components/FlexWrapper';
 import { SectionAboutTitle } from '../../../components/SectionTitle';
 import { Button } from '../../../components/Button';
 import { Container } from '../../../components/Container';
+import { Thema } from '../../../styles/Thema';
 
 export const About = () => {
   return (
@@ -15,8 +16,10 @@ export const About = () => {
           </HeadWrapper>
           <ContentWrapper>
             <Text>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat quia voluptas sit aspernatur te natus accusan. maiores alias consequatur aut equatur aut perferendi.</Text>
-            <Button type={'button'} styleType='filled'>Download CV</Button>
-            <Button type={'button'} styleType='filled'>View Projects</Button>
+            <ButtonWrapper>
+              <Button type={'button'} styleType='filled'>Download CV</Button>
+              <Button type={'button'} styleType='filled'>View Projects</Button>
+            </ButtonWrapper>
           </ContentWrapper>
         </FlexWrapper>
       </Container>
@@ -25,8 +28,19 @@ export const About = () => {
 };
 
 const StyledAbout = styled.section`
-  min-height: 470px;
   display: flex;
+
+  @media ${Thema.media.tablet} {
+
+    ${FlexWrapper}  {
+      flex-direction: column;
+    }
+
+   /*  & > ${Container} > ${FlexWrapper} > ${FlexWrapper} {
+      justify-content: center;
+    } */
+
+  }
 `
 
 const HeadWrapper = styled.div`
@@ -41,21 +55,40 @@ const ContentWrapper = styled.div`
   text-align: left;
   margin-left: 150px;
 
+  @media ${Thema.media.tablet} {
+    width: 100%;
+    margin-left: 0;
+  }
+
   button {
-    width: 170px;
+    width: 175px;
     height: 50px
   }
 
   button + button {
-      margin-left: 45px;
+    margin-left: 45px;
   }
 `
 
 const Text = styled.p`
   display: inline-block;
   padding-right: 20px;
-  font-size: 22px;
+  font-size: 2.2rem;
   letter-spacing: 0.44px;
   line-height: 2;
   margin-bottom: 4rem;
+
+  @media ${Thema.media.mobile} {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    padding-right: 0px;
+  }
+`
+
+const ButtonWrapper = styled.div `
+  display: flex;
+
+  @media ${Thema.media.tablet} {
+    justify-content: center;
+  }
 `

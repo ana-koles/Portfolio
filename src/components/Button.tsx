@@ -7,8 +7,11 @@ type PropsBtnPropsType = {
 }
 
 export const Button = styled.button<PropsBtnPropsType>`
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
   background-color: aliceblue;
-  font-size: 19px;
+  font-size: 1.9rem;
   font-weight: 600;
   line-height: 2;
   letter-spacing: 1.9px;
@@ -24,7 +27,11 @@ export const Button = styled.button<PropsBtnPropsType>`
     background-color: ${Thema.colors.accent};
     color: white;
     border: none;
-
   `}
+
+  @media ${Thema.media.mobile} {
+    font-size: 1.4rem;
+    letter-spacing: 1.4px;
+  }
 `
 

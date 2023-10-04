@@ -80,7 +80,7 @@ export const GlobalStyles = createGlobalStyle`
     padding: 85px 0;
 
     @media ${Thema.media.tablet} {
-      padding: 40px 0 80px;
+      padding: 70px 0 80px;
     }
   }
 

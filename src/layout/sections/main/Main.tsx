@@ -39,6 +39,10 @@ export const Main = () => {
 
 const StyledMain = styled.section`
   display: flex;
+
+  @media ${Thema.media.tablet} {
+    padding-top: 40px;
+  }
 `
 
 const ContentWrapper = styled.div`
@@ -71,7 +75,7 @@ const TextContent = styled.div`
   }
 
   button {
-    font-size: 19px;
+    font-size: 1.9rem;
     font-weight: 600;
     letter-spacing: 1.9px;
     text-transform: capitalize;
@@ -79,7 +83,10 @@ const TextContent = styled.div`
     height: 55px;
 
     @media ${Thema.media.mobile} {
-    margin: 0 auto;
+      margin: 0 auto;
+      font-size: 1.5rem;
+      width: 170px;
+      height: 50px;
     }
   }
 `
@@ -99,14 +106,32 @@ const MainContent = styled.div`
 `
 
 const MainTitle = styled.h1`
-  ${font({fontFamily: `'Epilogue', sans-serif`, weight: 800, Fmax: 60, Fmin: 25, color: Thema.colors.accent})}
-  letter-spacing: 1.2px;
+  ${font({fontFamily: `'Epilogue', sans-serif`, weight: 800, color: Thema.colors.accent})}
+  /* letter-spacing: 1px; */
+  font-size: 6rem;
+
+  @media ${Thema.media.tablet} {
+    font-size: 4.5rem;
+  }
+
+  @media ${Thema.media.mobile} {
+    font-size: 2.3rem;
+  }
 `
 
 const Name = styled.h2`
 /* mixin */
-  ${font({fontFamily: `'Epilogue', sans-serif`, weight: 800, Fmax: 60, Fmin: 25})}
+  ${font({fontFamily: `'Epilogue', sans-serif`, weight: 800})}
   letter-spacing: -0.1rem;
+  font-size: 6rem;
+
+  @media ${Thema.media.tablet} {
+    font-size: 4.5rem;
+  }
+
+  @media ${Thema.media.mobile} {
+    font-size: 2.3rem;
+  }
 
   span {
     color: white;
@@ -115,10 +140,14 @@ const Name = styled.h2`
       color: ${Thema.colors.text}
     }
 
-    @media ${Thema.media.mobile} {
-      margin-bottom: 5px;
+    @media ${Thema.media.tablet} {
+      font-size: 4.5rem;
     }
 
+    @media ${Thema.media.mobile} {
+      margin-bottom: 5px;
+      font-size: 2.3rem;
+    }
   }
 `
 
