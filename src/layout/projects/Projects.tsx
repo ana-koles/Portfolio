@@ -1,24 +1,24 @@
 import React from 'react';
 import styled, {css} from 'styled-components';
 import { SectionTitle } from '../../components/SectionTitle';
-import { FlexWrapper } from '../../components/FlexWrapper';
 import { Project } from './project/Project';
-import { Menu } from '../../components/menu/Menu';
 
 import english from '../../assets/images/project1.webp';
 import books from '../../assets/images/project2.webp';
 import shelter from '../../assets/images/proejct32.webp'
 import { Button } from '../../components/Button';
 import { Container } from '../../components/Container';
+import { ProjectMenu } from './projectMenu/ProjectMenu';
+import { Thema } from '../../styles/Thema';
 
-const projectItems = ['All', 'Landing', 'Reach', 'Javascript']
+const projectItems = ['All', 'Landing', 'React', 'Javascript']
 
 export const Projects = () => {
   return (
     <StyledProjects>
       <Container>
         <SectionTitle>My Portfolio</SectionTitle>
-        <Menu menuItems={projectItems}/>
+        <ProjectMenu menuItems={projectItems}/>
         <ProjectWrapper>
           <Project src={english} name={'App For Learning Enlish for Kids'} text={'HTML, CSS, Javascript'} link='#'></Project>
           <Project src={books} name={'Bookshop'} text={'HTML, CSS, Javascript'} link='#'></Project>
@@ -26,8 +26,6 @@ export const Projects = () => {
         </ProjectWrapper>
         <Button styleType={'outlined'} type={'button'}>More  Projects</Button>
       </Container>
-
-
     </StyledProjects>
   );
 };
@@ -36,6 +34,13 @@ const StyledProjects = styled.section`
   button {
     width: 175px;
     height: 57px;
+  }
+
+  @media ${Thema.media.mobile} {
+    button {
+      width: 170px;
+      height: 50px;
+    }
   }
 `
 

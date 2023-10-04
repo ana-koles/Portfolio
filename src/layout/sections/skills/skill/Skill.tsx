@@ -22,19 +22,15 @@ export const Skill = (props: SkillPropsType) => {
 };
 
 const StyledSkill = styled.div`
-  width: 25%;
+  width: 285px;
+  padding: 0 20px 60px;
+  flex-grow: 1;
   display: flex;
   align-items: center;
   flex-direction: column;
 
-  @media ${Thema.media.tablet} {
-    width: 40%;
-    margin-bottom: 90px;
-  }
-
-  @media ${Thema.media.tablet} {
-    width: 100%;
-    margin-bottom: 50px;
+  @media ${Thema.media.mobile} {
+    padding: 0 0 60px;
   }
 `
 

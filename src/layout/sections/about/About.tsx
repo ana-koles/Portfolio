@@ -55,18 +55,25 @@ const ContentWrapper = styled.div`
   text-align: left;
   margin-left: 150px;
 
+  button {
+    width: 175px;
+    height: 57px
+  }
+
+  button + button {
+    margin-left: 45px;
+  }
+
   @media ${Thema.media.tablet} {
     width: 100%;
     margin-left: 0;
   }
 
-  button {
-    width: 175px;
-    height: 50px
-  }
-
-  button + button {
-    margin-left: 45px;
+  @media ${Thema.media.mobile} {
+    button {
+      width: 170px;
+      height: 50px
+    }
   }
 `
 
@@ -74,7 +81,6 @@ const Text = styled.p`
   display: inline-block;
   padding-right: 20px;
   font-size: 2.2rem;
-  letter-spacing: 0.44px;
   line-height: 2;
   margin-bottom: 4rem;
 

@@ -82,6 +82,10 @@ export const GlobalStyles = createGlobalStyle`
     @media ${Thema.media.tablet} {
       padding: 70px 0 80px;
     }
+
+    @media ${Thema.media.tablet} {
+      padding: 50px 0 50px;
+    }
   }
 
   section:nth-of-type(even) {
