@@ -26,6 +26,16 @@ const StyledSkill = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+
+  @media ${Thema.media.tablet} {
+    width: 40%;
+    margin-bottom: 90px;
+  }
+
+  @media ${Thema.media.tablet} {
+    width: 100%;
+    margin-bottom: 50px;
+  }
 `
 
 const IconWrapper = styled.div`

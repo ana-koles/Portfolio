@@ -4,6 +4,7 @@ import { FlexWrapper } from '../../../components/FlexWrapper';
 import { SectionTitle } from '../../../components/SectionTitle';
 import { Skill } from './skill/Skill';
 import { Container } from '../../../components/Container';
+import { Thema } from '../../../styles/Thema';
 
 const data = [
   {
@@ -22,6 +23,7 @@ export const Skills = () => {
       <Container>
         <SectionTitle>My Skills</SectionTitle>
         <FlexWrapper wrap='wrap' justify='space-between'>
+
           <Skill iconId='css' title='CSS' text='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim'></Skill>
           <Skill iconId='html' title='HTML' text='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim'></Skill>
           <Skill iconId='react' title='React' text='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim'></Skill>
@@ -42,5 +44,11 @@ export const Skills = () => {
 const StyledSkills = styled.section`
   ${FlexWrapper} {
     gap: 80px;
+  }
+
+  @media ${Thema.media.tablet} {
+    ${FlexWrapper} {
+      gap: 0px;
+    }
   }
 `

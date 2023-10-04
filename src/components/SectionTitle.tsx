@@ -9,7 +9,7 @@ export const SectionTitle = styled.h2`
   margin-bottom: 70px;
 
   @media ${Thema.media.mobile} {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 `
 

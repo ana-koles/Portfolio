@@ -19,7 +19,7 @@ export const Button = styled.button<PropsBtnPropsType>`
 
   ${props => props.styleType === 'outlined' && css<PropsBtnPropsType>`
     background-color: transparent;
-    border: 1px solid ${Thema.colors.accent};
+    border: 2px solid ${Thema.colors.accent};
   `
   }
 
