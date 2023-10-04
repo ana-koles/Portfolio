@@ -12,7 +12,8 @@ export const Thema = {
 
   },
   media: {
-    tablet: 'screen and (max-width: 768px)',
-    mobile: 'screen and (max-width: 576px)'
+    large: 'screen and (max-width: 1279px)',
+    tablet: 'screen and (max-width: 991px)',
+    mobile: 'screen and (max-width: 768px)'
   }
 }

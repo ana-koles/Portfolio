@@ -33,9 +33,9 @@ export const MobileMenu = (props: MobileMenuPropsType) => {
 const StyledMobileMenu = styled.nav`
   display: none;
 
-  @media ${Thema.media.mobile} {
+  /* @media ${Thema.media.mobile} {
     display: block;
-  }
+  } */
 `
 
 const BurgerButton = styled.button<{isOpen: boolean}>`

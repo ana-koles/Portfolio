@@ -18,29 +18,36 @@ export const GlobalStyles = createGlobalStyle`
 
   @font-face {
     font-family: 'Manrope', sans-serif;
-    src: url(./assets/fonts/Manrope-Regular.eot) format('eot'), url(Manrope-Regular.woff2) format(('woff2')), url(./assets/fonts/Manrope-Regular.ttf) format('ttf') ;
+    src: url(./assets/fonts/Manrope-Regular.eot) format('eot'), url(./assets/fonts/Manrope-Regular.woff2) format(('woff2')), url(./assets/fonts/Manrope-Regular.ttf) format('ttf') ;
     font-weight: 400;
     font-style: normal;
   }
 
   @font-face {
     font-family: 'Manrope', sans-serif;
-    src: url(./assets/fonts/Manrope-SemiBold.eot) format('eot'), url(Manrope-SemiBold.woff2) format(('woff2')), url(./assets/fonts/Manrope-SemiBold.ttf) format('ttf') ;
+    src: url(./assets/fonts/Manrope-SemiBold.eot) format('eot'), url(./assets/fonts/Manrope-SemiBold.woff2) format(('woff2')), url(./assets/fonts/Manrope-SemiBold.ttf) format('ttf') ;
     font-weight: 600;
     font-style: normal;
   }
 
   @font-face {
     font-family: 'Epilogue', sans-serif;
-    src: url(./assets/fonts/Epilogue-Light.eot) format('eot'), url(Epilogue-Light.woff2) format(('woff2')), url(./assets/fonts/Epilogue-Light.ttf) format('ttf') ;
+    src: url(./assets/fonts/Epilogue-Light.eot) format('eot'), url(./assets/fonts/Epilogue-Light.woff2) format(('woff2')), url(./assets/fonts/Epilogue-Light.ttf) format('ttf') ;
     font-weight: 300;
     font-style: normal;
   }
 
   @font-face {
     font-family: 'Epilogue', sans-serif;
-    src: url(./assets/fonts/Epilogue-Regular.eot) format('eot'), url(Epilogue-Regular.woff2) format(('woff2')), url(./assets/fonts/Epilogue-Regular.ttf) format('ttf') ;
+    src: url(./assets/fonts/Epilogue-Regular.eot) format('eot'), url(./assets/fonts/Epilogue-Regular.woff2) format(('woff2')), url(./assets/fonts/Epilogue-Regular.ttf) format('ttf') ;
     font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Epilogue';
+    src: url(./assets/fonts/Epilogue-ExtraBold.eot) format('eot'), url(./assets/fonts/Epilogue-ExtraBoldr.woff2) format(('woff2')), url(./assets/fonts/Epilogue-ExtraBold.ttf) format('ttf') ;
+    font-weight: 800;
     font-style: normal;
   }
 
@@ -71,6 +78,10 @@ export const GlobalStyles = createGlobalStyle`
 
   section {
     padding: 85px 0;
+
+    @media ${Thema.media.tablet} {
+      padding: 40px 0 80px;
+    }
   }
 
   section:nth-of-type(even) {

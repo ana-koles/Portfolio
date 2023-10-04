@@ -5,6 +5,7 @@ import { FlexWrapper } from '../../../components/FlexWrapper';
 import { Button } from '../../../components/Button';
 import { Container } from '../../../components/Container';
 import { Thema } from '../../../styles/Thema';
+import { font } from '../../../styles/Common';
 
 export const Main = () => {
   return (
@@ -15,10 +16,10 @@ export const Main = () => {
 
             <TextContent>
               <StyledSpan>Hi Everyone!</StyledSpan>
-              <StyledMainContent>
-                <StyledName>Anastasiya Kalesni<span>kava</span></StyledName>
-                <StyledMainTitle>Frontend Developer</StyledMainTitle>
-              </StyledMainContent>
+              <MainContent>
+                <Name>Anastasiya Kalesni<span>kava</span></Name>
+                <MainTitle>Frontend Developer</MainTitle>
+              </MainContent>
               <Text>Make designs mainly logos, visual identities, apps & websites, social media and magazines.</Text>
               <Button styleType='outlined' type='button'>Get in Touch</Button>
             </TextContent>
@@ -37,7 +38,6 @@ export const Main = () => {
 };
 
 const StyledMain = styled.section`
-  min-height: 760px;
   display: flex;
 `
 
@@ -48,7 +48,7 @@ const ContentWrapper = styled.div`
   z-index: 10;
   width: 100%;
 
-  @media screen and (max-width: 1200px) {
+  @media ${Thema.media.large} {
     flex-direction: column;
   }
 `
@@ -60,6 +60,16 @@ const TextContent = styled.div`
   justify-content: space-between;
   z-index: 10;
 
+  @media ${Thema.media.large} {
+    margin-bottom: 80px;
+    min-height: 350px;
+  }
+
+  @media ${Thema.media.mobile} {
+    margin-bottom: 35px;
+    min-height: 265px;
+  }
+
   button {
     font-size: 19px;
     font-weight: 600;
@@ -67,52 +77,73 @@ const TextContent = styled.div`
     text-transform: capitalize;
     width: 175px;
     height: 55px;
+
+    @media ${Thema.media.mobile} {
+    margin: 0 auto;
+    }
   }
 `
 
 const StyledSpan = styled.span`
   font-size: 18px;
 
+  @media ${Thema.media.mobile} {
+    font-size: 1.4rem;
+  }
 `
 
-const StyledMainContent = styled.div`
+const MainContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 `
 
-const StyledMainTitle = styled.h1`
-  font-family: 'Epilogue', sans-serif;
-  font-size: 60px;
-  font-style: normal;
-  font-weight: 800;
-  color: ${Thema.colors.accent};
+const MainTitle = styled.h1`
+  ${font({fontFamily: `'Epilogue', sans-serif`, weight: 800, Fmax: 60, Fmin: 25, color: Thema.colors.accent})}
   letter-spacing: 1.2px;
 `
 
-const StyledName = styled.h2`
-  font-family: 'Epilogue', sans-serif;
-  font-size: 60px;
-  font-style: normal;
-  font-weight: 800;
+const Name = styled.h2`
+/* mixin */
+  ${font({fontFamily: `'Epilogue', sans-serif`, weight: 800, Fmax: 60, Fmin: 25})}
   letter-spacing: -0.1rem;
 
   span {
-    color: white
+    color: white;
+
+    @media ${Thema.media.large} {
+      color: ${Thema.colors.text}
+    }
+
+    @media ${Thema.media.mobile} {
+      margin-bottom: 5px;
+    }
+
   }
 `
 
 const Text = styled.p`
-  font-size: 20px;
+  font-size: 2rem;
   width: 60%;
   line-height: 2;
   display: inline-block;
   text-align: left;
+
+  @media ${Thema.media.mobile} {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    width: 100%;
+  }
 `
 
 const OuterWrapper = styled.div`
   position: absolute;
   right: 25px;
+
+  @media ${Thema.media.large} {
+    position: relative;
+    right: 0;
+  }
 
   &::before {
     content: "";
@@ -121,18 +152,23 @@ const OuterWrapper = styled.div`
     height: 445px;
     background-color: ${Thema.colors.primaryBg};
     position: absolute;
-    left: -20px;
     transform: rotate(-7deg);
     z-index: 0;
 
-    @media screen and (max-width: 1200px) {
-      left: 200px;
+    @media ${Thema.media.large} {
+      left: 250px;
     }
-  }
 
-  @media screen and (max-width: 1200px) {
-    position: relative;
-    top: 100px;
+    @media ${Thema.media.tablet} {
+      left: 115px;
+    }
+
+    @media ${Thema.media.mobile} {
+      width: 250px;
+      height: 250px;
+      left: 6px;
+      top: 20px;
+    }
   }
 `
 
@@ -141,22 +177,16 @@ const PhotoWrapper = styled.div`
   z-index: 1;
   height: 445px;
   width: 445px;
-
   transform: rotate(7.5deg);
   overflow: hidden;
 
-  /* &::before {
-    content: "";
-    display: block;
-    width: 445px;
-    height: 445px;
-    background-color: ${Thema.colors.primaryBg};
-    position: absolute;
-    left: -20px;
-    transform: rotate(-7deg);
-    z-index: 0;
-  } */
+  @media ${Thema.media.mobile} {
+    height: 250px;
+    width: 250px;
+  }
 `
+
+
 
 type StyledPhotoPropsType = {
   src: string,
