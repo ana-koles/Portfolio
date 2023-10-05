@@ -17,7 +17,7 @@ export const Footer = () => {
             </FlexWrapper>
             <Icon iconId={'vertline'} height={'35px'} width={'4px'} viewBox={'0 0 35px 4px'}/>
             <FlexWrapper>
-              <Icon iconId={'mail'} height={'24px'} width={'24px'} viewBox={'0 0 21px 21px'}/>
+              <Icon iconId={'mail'} height={'17px'} width={'24px'} viewBox={'0 0 17px 24px'}/>
               <Text>anastasijakoles@gmail.com</Text>
             </FlexWrapper>
           </ContactsWrapper>
@@ -61,10 +61,19 @@ const ContactsWrapper = styled.div`
   margin-top: 50px;
   gap: 40px;
 
-  svg:last-of-type {
-    padding-top: 5px;
-  }
+  @media ${Thema.media.mobile} {
+    flex-direction: column;
+    gap: 0;
 
+    ${FlexWrapper} {
+      justify-content: center;
+      align-items: center;
+    }
+
+    &:nth-child(2) {
+      display: none;
+    }
+  }
 `
 
 const SocialIconList = styled.ul`
