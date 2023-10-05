@@ -4,6 +4,7 @@ import { FlexWrapper } from '../../../components/FlexWrapper';
 import { Form } from './form/Form';
 import { Container } from '../../../components/Container';
 import { Thema } from '../../../styles/Thema';
+import { font } from '../../../styles/Common';
 
 export const Contacts = () => {
   return (
@@ -23,29 +24,61 @@ export const Contacts = () => {
 };
 
 const StyledContacts = styled.section`
-
+  @media ${Thema.media.tablet} {
+    ${FlexWrapper} {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 `
 
 const TextWrapper = styled.div`
   max-width: 45%;
   display: flex;
   flex-direction: column;
+
+  @media ${Thema.media.tablet} {
+    max-width: 100%;
+  }
+
 `
 
 const ContactsTitle = styled.h4`
-  width: 90%;
-  font-size: 4rem;
-  text-align: start;
+  /* ${font({fontFamily: `'Manrope', sans-serif`, weight: 600, color: Thema.colors.secondaryColor,  Fmin: 23, Fmax: 40})} */
+
+  letter-spacing: 1px;
   font-weight: 600;
   color: white;
+  font-size: 4rem;
+  width: 90%;
+  text-align: start;
+
+  @media ${Thema.media.tablet} {
+    font-size: 3rem;
+  }
+
+  @media ${Thema.media.mobile} {
+    font-size: 2.3rem;
+  }
+
 `
 const Link = styled.a`
+ /*  ${font({fontFamily: `'Manrope', sans-serif`, weight: 600, color: Thema.colors.secondaryColor,  Fmin: 23, Fmax: 40})} */
   font-size: 4rem;
-  text-align: start;
   font-weight: 600;
   color: white;
   display: block;
   margin-bottom: 10px;
+  text-align: start;
+
+  @media ${Thema.media.tablet} {
+    font-size: 3rem;
+  }
+
+  @media ${Thema.media.mobile} {
+    font-size: 2.3rem;
+  }
 
   &:hover{
     text-decoration: underline;
@@ -57,5 +90,9 @@ const Text = styled.p`
   font-size: 1.6rem;
   text-align: start;
   color: ${Thema.colors.contactsTextColor};
-  line-height: 27px;
+  line-height: 1.3;
+
+  @media ${Thema.media.mobile} {
+    font-size: 1.4rem;
+  }
 `

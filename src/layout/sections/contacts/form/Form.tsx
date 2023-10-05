@@ -8,12 +8,12 @@ import { Thema } from '../../../../styles/Thema';
 export const Form = () => {
   return (
     <StyledForm>
-      <FlexWrapper wrap={'wrap'} justify='space-between'>
+      <FormWrapper>
         <Input type={'text'} placeholder={'Name*'}/>
         <Input type={'email'} placeholder={'Email Address*'}/>
         <Input type={'text'} placeholder={'Subject*'}/>
         <Input type={'text'} placeholder={'Phone'}/>
-      </FlexWrapper>
+      </FormWrapper>
       <TextArea placeholder={'Your message'}/>
       <Button type={'submit'} styleType='outlined'>Send message</Button>
   </StyledForm>
@@ -24,6 +24,18 @@ export const Form = () => {
 const StyledForm = styled.div`
   margin-left: 30px;
 
+  @media ${Thema.media.tablet} {
+    max-width: 470px;
+    width: 100%;
+    margin: 70px 0 0;
+
+  }
+
+  @media ${Thema.media.mobile} {
+    width: 100%;
+    margin-top: 38px;
+  }
+
   button {
     width: 100%;
     border-color: ${Thema.colors.secondaryColor};
@@ -31,6 +43,9 @@ const StyledForm = styled.div`
     text-align: left;
     padding: 10px;
 
+    @media ${Thema.media.mobile} {
+      text-align: center;
+    }
   }
 
   input,
@@ -41,7 +56,19 @@ const StyledForm = styled.div`
     padding: 17px;
     font-family: 'Manrope', sans-serif;
     margin-bottom: 5px;
+
+    @media ${Thema.media.mobile} {
+      font-size: 1.4rem;
+    }
   }
+
+
+`
+
+const FormWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 `
 
 type InputPropsType = {
@@ -57,10 +84,18 @@ const Input = styled.input.attrs<InputPropsType>((props) => ({
 
   &:nth-child(even) {
     margin-left: 0.5rem;
+
+    @media ${Thema.media.mobile} {
+      margin-left: 0;
+    }
   }
 
   &:focus-visible {
     outline: 2px solid ${Thema.colors.contactsTextColor};
+  }
+
+  @media ${Thema.media.mobile} {
+    width: 100%;
   }
 
 `

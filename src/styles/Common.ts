@@ -15,5 +15,5 @@ export const font = ({fontFamily, weight, color, lineHeight, Fmin, Fmax}: FontPr
   font-weight: ${weight || 400};
   color: ${color || Thema.colors.text};
   line-height: ${lineHeight || 1.2};
-  font-size: calc( (100vw - 320px)/(1280 - 320) * (${Fmax} - ${Fmin}) + ${Fmin}px);
+  font-size: calc( (100vw - 660px)/(1280 - 660) * (${Fmax} - ${Fmin}) + ${Fmin}px);
 `
