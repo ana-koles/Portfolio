@@ -100,6 +100,9 @@ export const GlobalStyles = createGlobalStyle`
     cursor: pointer;
   }
 
+  p {
+    line-height: 1.4;
+  }
 
 
 

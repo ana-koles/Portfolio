@@ -45,13 +45,16 @@ export const Footer = () => {
           </ContactsWrapper>
 
           <SocialIconList>
-            {iconsData.map((icon, index: number) => (
-              <SocialIconItem key={index}>
-                <SolialIconLink>
-                  <Icon iconId={icon.iconId} height={icon.height} width={icon.width} viewBox={icon.viewBox} />
-                </SolialIconLink>
-              </SocialIconItem>
-            ))}
+            {iconsData.map((icon, index: number) => {
+
+              return (
+                <SocialIconItem key={index}>
+                  <SolialIconLink>
+                    <Icon iconId={icon.iconId} height={icon.height} width={icon.width} viewBox={icon.viewBox} />
+                  </SolialIconLink>
+                </SocialIconItem>
+              )
+              })}
           </SocialIconList>
 
           <Copyright>© 2023 Anastasiya Kalesnikava, All Rights Reserved.</Copyright>

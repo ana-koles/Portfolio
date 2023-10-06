@@ -15,7 +15,6 @@ export const Project = (props: ProjectPropsType) => {
     <StyledProject>
       <Image src={props.src}/>
       <Label name={props.name} text={props.text} link={props.link}></Label>
-      <HoverCover></HoverCover>
     </StyledProject>
   );
 };
@@ -30,21 +29,29 @@ const HoverCover = styled.div`
   width: 100%;
   height: 100%;
   display: none;
-  transition: opacity 0.3s;
+  transition: opacity 0.5s;
 `
 
 const StyledProject = styled.div`
   position: relative;
   max-width: 930px;
   width: 100%;
-  max-height: 480px;
+  height: 480px;
   margin-bottom: 50px;
   overflow: hidden;
-  border: 1px solid green;
+  z-index: 0;
 
   &:hover  {
-    ${HoverCover} {
-      display: block;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.30);
+      backdrop-filter: blur(4px);
+      z-index: 5;
     }
 
     ${LabelWrapper} {

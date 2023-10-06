@@ -20,13 +20,24 @@ export const Button = styled.button<PropsBtnPropsType>`
   ${props => props.styleType === 'outlined' && css<PropsBtnPropsType>`
     background-color: transparent;
     border: 2px solid ${Thema.colors.accent};
+
+    &:hover {
+      background-color: ${Thema.colors.accent};
+      color: ${Thema.colors.secondaryColor}
+    }
   `
   }
 
   ${props => props.styleType === 'filled' && css<PropsBtnPropsType>`
     background-color: ${Thema.colors.accent};
-    color: white;
+    color: ${Thema.colors.secondaryColor};
     border: none;
+
+    &:hover {
+      background-color: ${Thema.colors.secondaryColor};
+      color: ${Thema.colors.accent};
+      border: 2px solid ${Thema.colors.accent};
+    }
   `}
 
   @media ${Thema.media.mobile} {

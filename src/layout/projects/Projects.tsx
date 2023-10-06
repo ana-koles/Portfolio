@@ -11,18 +11,43 @@ import { Container } from '../../components/Container';
 import { ProjectMenu } from './projectMenu/ProjectMenu';
 import { Thema } from '../../styles/Thema';
 
-const projectItems = ['All', 'Landing', 'React', 'Javascript']
+const projectMenuItems = ['All', 'Landing', 'React', 'Javascript'];
+
+const projectData = [
+  {
+    src: english,
+    name: 'App For Learning Enlish for Kids',
+    text: 'HTML, CSS, Javascript',
+    link:'#',
+  },
+  {
+    src: books,
+    name: 'Bookshop',
+    text: 'HTML, CSS, Javascript',
+    link:'#',
+  },
+  {
+    src: shelter,
+    name: 'Shelter',
+    text: 'HTML, CSS, Javascript',
+    link:'#',
+  }
+]
 
 export const Projects = () => {
   return (
     <StyledProjects>
       <Container>
         <SectionTitle>My Portfolio</SectionTitle>
-        <ProjectMenu menuItems={projectItems}/>
+        <ProjectMenu menuItems={projectMenuItems}/>
         <ProjectWrapper>
-          <Project src={english} name={'App For Learning Enlish for Kids'} text={'HTML, CSS, Javascript'} link='#'></Project>
-          <Project src={books} name={'Bookshop'} text={'HTML, CSS, Javascript'} link='#'></Project>
-          <Project src={shelter} name={'Shelter'} text={'HTML, CSS, Javascript'} link='#'></Project>
+
+          {projectData.map((project, index: number) => {
+            return (
+              <Project src={project.src} name={project.name} text={project.text} link={project.link} key={index}></Project>
+            )
+          })}
+
         </ProjectWrapper>
         <Button styleType={'outlined'} type={'button'}>More  Projects</Button>
       </Container>
@@ -43,7 +68,6 @@ const StyledProjects = styled.section`
     }
   }
 `
-
 const ProjectWrapper = styled.div`
   display: flex;
   flex-direction: column;

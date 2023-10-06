@@ -82,6 +82,7 @@ const TextContent = styled.div`
     width: 175px;
     height: 55px;
 
+
     @media ${Thema.media.mobile} {
       margin: 0 auto;
       font-size: 1.5rem;
