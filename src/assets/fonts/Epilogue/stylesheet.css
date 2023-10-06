@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Epilogue';
+    src: url('Epilogue-Light.eot');
+    src: url('Epilogue-Light.eot?#iefix') format('embedded-opentype'),
+        url('Epilogue-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
