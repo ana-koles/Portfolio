@@ -13,15 +13,4 @@ export const Container = styled.div`
   justify-content: center;
   border: 1px solid red;
 
-  @media ${Thema.media.large} {
-    max-width: 960px;
-  }
-
-  @media ${Thema.media.tablet} {
-    max-width: 720px;
-  }
-
-  @media ${Thema.media.mobile} {
-    max-width: 320px;
-  }
 `

@@ -5,6 +5,28 @@ import { Icon } from '../../components/icon/Icon';
 import { Thema } from '../../styles/Thema';
 import { Container } from '../../components/Container';
 
+
+const iconsData = [
+  {
+    iconId: 'be',
+    height: '40px',
+    width: '40px',
+    viewBox: '0 0 40px  40px'
+  },
+  {
+    iconId: 'insta',
+    height: '40px',
+    width: '40px',
+    viewBox: '0 0 40px  40px'
+  },
+  {
+    iconId: 'linkedin',
+    height: '40px',
+    width: '40px',
+    viewBox: '0 0 40px  40px'
+  }
+]
+
 export const Footer = () => {
   return (
     <StyledFooter>
@@ -23,30 +45,18 @@ export const Footer = () => {
           </ContactsWrapper>
 
           <SocialIconList>
-            <SocialIconItem>
-              <SolialIconLink>
-                <Icon iconId={'be'} height={ '40px'} width={'40px'} viewBox={'0 0 40px  40px'}/>
-              </SolialIconLink>
-            </SocialIconItem>
-
-            <SocialIconItem>
-              <SolialIconLink>
-                <Icon iconId={'insta'} height={'40px'} width={ '40px'} viewBox={'0 0  40px 40px'}/>
-              </SolialIconLink>
-            </SocialIconItem>
-
-            <SocialIconItem>
-              <SolialIconLink>
-                <Icon iconId={'linkedin'} height={ '40px'} width={'40px'} viewBox={'0 0 40px  40px'}/>
-              </SolialIconLink>
-            </SocialIconItem>
+            {iconsData.map((icon, index: number) => (
+              <SocialIconItem key={index}>
+                <SolialIconLink>
+                  <Icon iconId={icon.iconId} height={icon.height} width={icon.width} viewBox={icon.viewBox} />
+                </SolialIconLink>
+              </SocialIconItem>
+            ))}
           </SocialIconList>
 
           <Copyright>© 2023 Anastasiya Kalesnikava, All Rights Reserved.</Copyright>
         </FlexWrapper>
       </Container>
-
-
       </StyledFooter>
   );
 };
@@ -63,7 +73,7 @@ const ContactsWrapper = styled.div`
 
   @media ${Thema.media.mobile} {
     flex-direction: column;
-    gap: 0;
+    gap: 30px;
 
     ${FlexWrapper} {
       justify-content: center;
@@ -71,6 +81,10 @@ const ContactsWrapper = styled.div`
     }
 
     &:nth-child(2) {
+      display: none;
+    }
+
+    & > svg {
       display: none;
     }
   }
