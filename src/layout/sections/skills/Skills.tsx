@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import styled, {css} from 'styled-components';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 import { SectionTitle } from '../../../components/SectionTitle';
 import { Skill } from './skill/Skill';
 import { Container } from '../../../components/Container';
-import { Thema } from '../../../styles/Thema';
+import { S } from './Skills_Styles';
 
 const skillsData = [
   {
@@ -39,9 +38,9 @@ const skillsData = [
   },
 ]
 
-export const Skills = () => {
+export const Skills: React.FC = () => {
   return (
-    <StyledSkills>
+    <S.Skills>
       <Container>
         <SectionTitle>My Skills</SectionTitle>
         <FlexWrapper wrap='wrap'>
@@ -52,22 +51,8 @@ export const Skills = () => {
 
         </FlexWrapper>
       </Container>
-
-
-    </StyledSkills>
+    </S.Skills>
   );
 };
 
-const StyledSkills = styled.section`
-  padding-bottom: 0px;
-  ${FlexWrapper} {
-    gap: 80px;
-  }
 
-
-  @media ${Thema.media.tablet} {
-    ${FlexWrapper} {
-      gap: 0px;
-    }
-  }
-`
