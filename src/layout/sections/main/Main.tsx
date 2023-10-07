@@ -170,7 +170,7 @@ const Text = styled.p`
 
 const OuterWrapper = styled.div`
   position: absolute;
-  right: 25px;
+  right: 0px;
   width: 445px;
   height: 445px;
 
@@ -207,7 +207,6 @@ const OuterWrapper = styled.div`
       height: 400px;
 
     }
-
 
     @media ${Thema.media.mobile} {
       width: 250px;
