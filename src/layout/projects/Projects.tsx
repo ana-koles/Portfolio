@@ -56,6 +56,7 @@ export const Projects = () => {
 };
 
 const StyledProjects = styled.section`
+
   button {
     width: 175px;
     height: 57px;
@@ -67,11 +68,19 @@ const StyledProjects = styled.section`
       height: 50px;
     }
   }
+
+  ${SectionTitle} {
+    margin-bottom: 37px;
+  }
 `
 const ProjectWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 50px;
+
+  @media ${Thema.media.mobile} {
+    margin-top: 30px;
+  }
 `
 

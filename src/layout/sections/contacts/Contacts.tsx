@@ -90,9 +90,14 @@ const Text = styled.p`
   font-size: 1.6rem;
   text-align: start;
   color: ${Thema.colors.contactsTextColor};
-  line-height: 1.3;
+  line-height: 2;
+
+  @media ${Thema.media.tablet} {
+    padding-right: 100px;
+  }
 
   @media ${Thema.media.mobile} {
     font-size: 1.4rem;
+    padding-right: 0px;
   }
 `

@@ -64,6 +64,10 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 10px;
     line-height: 1.2;
 
+/*     have to set min width equal to the smalles screen that we design so that there was good scale in case if window is less than this min window width
+      and there is no horizontal scrtoll for small screens
+*/    min-width: 360px;
+
   }
 
   a {
@@ -77,14 +81,14 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   section {
-    padding: 85px 0;
+    padding: 80px 0;
 
     @media ${Thema.media.tablet} {
       padding: 70px 0 80px;
     }
 
-    @media ${Thema.media.tablet} {
-      padding: 50px 0 50px;
+    @media ${Thema.media.mobile} {
+      padding: 60px 0 60px;
     }
   }
 

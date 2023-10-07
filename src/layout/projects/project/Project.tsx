@@ -19,25 +19,12 @@ export const Project = (props: ProjectPropsType) => {
   );
 };
 
-const HoverCover = styled.div`
-  background-image: linear-gradient(200deg, rgba(139, 117, 117, 0.00) 1.58%, rgba(0, 0, 0, 0.90) 93.44%);
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  display: none;
-  transition: opacity 0.5s;
-`
-
 const StyledProject = styled.div`
   position: relative;
   max-width: 930px;
   width: 100%;
   height: 480px;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
   overflow: hidden;
   z-index: 0;
 
@@ -66,13 +53,14 @@ const StyledProject = styled.div`
 
   @media ${Thema.media.mobile} {
     max-height: 150px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 `
 
 const Image = styled.img`
   width: 100%;
   height: 100%;
-  transform: translateY(0px);
+  transform: translateY(20px);
   object-fit: cover;
+  aspect-ratio: 2 / 1;
 `

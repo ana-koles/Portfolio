@@ -1,5 +1,6 @@
 import React from 'react';
-import photo from '../../../assets/images/photo.webp'
+/* import photo from './photo.webp'; */
+import photo from '../../../assets/images/photo.webp';
 import styled from 'styled-components';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 import { Button } from '../../../components/Button';
@@ -26,7 +27,7 @@ export const Main = () => {
 
             <OuterWrapper>
               <PhotoWrapper>
-                <StyledPhoto src={photo} alt="photo" />
+                <StyledPhoto src={photo} alt='photo'></StyledPhoto>
               </PhotoWrapper>
             </OuterWrapper>
 
@@ -39,9 +40,11 @@ export const Main = () => {
 
 const StyledMain = styled.section`
   display: flex;
+  padding-bottom: 120px;
 
   @media ${Thema.media.tablet} {
     padding-top: 40px;
+    padding-bottom: 80px;
   }
 `
 
@@ -70,7 +73,7 @@ const TextContent = styled.div`
   }
 
   @media ${Thema.media.mobile} {
-    margin-bottom: 35px;
+    margin-bottom: 55px;
     min-height: 265px;
   }
 
@@ -108,7 +111,6 @@ const MainContent = styled.div`
 
 const MainTitle = styled.h1`
   ${font({fontFamily: `'Epilogue', sans-serif`, weight: 800, color: Thema.colors.accent})}
-  /* letter-spacing: 1px; */
   font-size: 6rem;
 
   @media ${Thema.media.tablet} {
@@ -123,7 +125,7 @@ const MainTitle = styled.h1`
 const Name = styled.h2`
 /* mixin */
   ${font({fontFamily: `'Epilogue', sans-serif`, weight: 800})}
-  letter-spacing: -0.1rem;
+  letter-spacing: -0.6px;
   font-size: 6rem;
 
   @media ${Thema.media.tablet} {
@@ -169,10 +171,25 @@ const Text = styled.p`
 const OuterWrapper = styled.div`
   position: absolute;
   right: 25px;
+  width: 445px;
+  height: 445px;
+
 
   @media ${Thema.media.large} {
     position: relative;
     right: 0;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  @media ${Thema.media.tablet} {
+    width: 400px;
+    height: 400px;
+  }
+
+  @media ${Thema.media.mobile} {
+    width: 250px;
+    height: 250px;
   }
 
   &::before {
@@ -185,19 +202,16 @@ const OuterWrapper = styled.div`
     transform: rotate(-7deg);
     z-index: 0;
 
-    @media ${Thema.media.large} {
-      left: 250px;
+    @media ${Thema.media.tablet} {
+      width: 400px;
+      height: 400px;
+
     }
 
-    @media ${Thema.media.tablet} {
-      left: 115px;
-    }
 
     @media ${Thema.media.mobile} {
       width: 250px;
       height: 250px;
-      left: 6px;
-      top: 20px;
     }
   }
 `
@@ -210,13 +224,16 @@ const PhotoWrapper = styled.div`
   transform: rotate(7.5deg);
   overflow: hidden;
 
+  @media ${Thema.media.tablet} {
+    height: 400px;
+    width: 400px;
+  }
+
   @media ${Thema.media.mobile} {
     height: 250px;
     width: 250px;
   }
 `
-
-
 
 type StyledPhotoPropsType = {
   src: string,
@@ -227,7 +244,11 @@ const StyledPhoto = styled.img<StyledPhotoPropsType>`
   height: 100%;
   width: 100%;
   object-fit: cover;
-  transform: scale(1.7) translateY(70px) translateX(20px)
+  transform: scale(1.7) translateY(70px) translateX(20px);
+
+  @media ${Thema.media.mobile} {
+    transform: scale(1.7) translateY(35px) translateX(10px);
+  }
 
 `
 

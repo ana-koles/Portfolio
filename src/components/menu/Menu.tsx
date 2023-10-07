@@ -28,7 +28,7 @@ const StyledMenu = styled.nav`
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 50px;
+    gap: 5px;
   }
 
   @media ${Thema.media.mobile} {

@@ -27,7 +27,7 @@ const StyledForm = styled.div`
   @media ${Thema.media.tablet} {
     max-width: 470px;
     width: 100%;
-    margin: 70px 0 0;
+    margin: 50px 0 0;
 
   }
 
@@ -59,6 +59,7 @@ const StyledForm = styled.div`
 
     @media ${Thema.media.mobile} {
       font-size: 1.4rem;
+      margin-bottom: 10px;
     }
   }
 

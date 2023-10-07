@@ -59,9 +59,11 @@ export const Skills = () => {
 };
 
 const StyledSkills = styled.section`
+  padding-bottom: 0px;
   ${FlexWrapper} {
     gap: 80px;
   }
+
 
   @media ${Thema.media.tablet} {
     ${FlexWrapper} {
