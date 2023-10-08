@@ -9,7 +9,7 @@ import shelter from '../../assets/images/proejct32.webp'
 import { Button } from '../../components/Button';
 import { Container } from '../../components/Container';
 import { ProjectMenu } from './projectMenu/ProjectMenu';
-import { Thema } from '../../styles/Thema';
+import { S } from './Projects_Styles';
 
 const projectMenuItems = ['All', 'Landing', 'React', 'Javascript'];
 
@@ -34,13 +34,14 @@ const projectData = [
   }
 ]
 
-export const Projects = () => {
+export const Projects: React.FC = () => {
   return (
-    <StyledProjects>
+    <S.Projects>
       <Container>
         <SectionTitle>My Portfolio</SectionTitle>
         <ProjectMenu menuItems={projectMenuItems}/>
-        <ProjectWrapper>
+
+        <S.ProjectWrapper>
 
           {projectData.map((project, index: number) => {
             return (
@@ -48,39 +49,10 @@ export const Projects = () => {
             )
           })}
 
-        </ProjectWrapper>
+        </S.ProjectWrapper>
+        
         <Button styleType={'outlined'} type={'button'}>More  Projects</Button>
       </Container>
-    </StyledProjects>
+    </S.Projects>
   );
 };
-
-const StyledProjects = styled.section`
-
-  button {
-    width: 175px;
-    height: 57px;
-  }
-
-  @media ${Thema.media.mobile} {
-    button {
-      width: 170px;
-      height: 50px;
-    }
-  }
-
-  ${SectionTitle} {
-    margin-bottom: 37px;
-  }
-`
-const ProjectWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 50px;
-
-  @media ${Thema.media.mobile} {
-    margin-top: 30px;
-  }
-`
-
