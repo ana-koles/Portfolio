@@ -31,15 +31,9 @@ const StyledAbout = styled.section`
   display: flex;
 
   @media ${Thema.media.tablet} {
-
     ${FlexWrapper}  {
       flex-direction: column;
     }
-
-   /*  & > ${Container} > ${FlexWrapper} > ${FlexWrapper} {
-      justify-content: center;
-    } */
-
   }
 `
 
@@ -53,7 +47,7 @@ const HeadWrapper = styled.div`
 const ContentWrapper = styled.div`
   width: 80%;
   text-align: left;
-  margin-left: 150px;
+  margin-left: 74px;
 
   button {
     width: 175px;
@@ -83,11 +77,16 @@ const Text = styled.p`
   font-size: 2.2rem;
   line-height: 2;
   margin-bottom: 4rem;
+  letter-spacing: 0.44px;
+
+  @media ${Thema.media.tablet} {
+    padding-right: 0px;
+  }
+
 
   @media ${Thema.media.mobile} {
     font-size: 1.4rem;
     line-height: 1.5;
-    padding-right: 0px;
   }
 `
 

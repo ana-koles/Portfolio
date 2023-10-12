@@ -9,45 +9,50 @@ import shelter from '../../assets/images/proejct32.webp'
 import { Button } from '../../components/Button';
 import { Container } from '../../components/Container';
 import { ProjectMenu } from './projectMenu/ProjectMenu';
-import { Thema } from '../../styles/Thema';
+import { S } from './Projects_Styles';
 
-const projectItems = ['All', 'Landing', 'React', 'Javascript']
+const projectMenuItems = ['All', 'Landing', 'React', 'Javascript'];
 
-export const Projects = () => {
+const projectData = [
+  {
+    src: english,
+    name: 'App For Learning Enlish for Kids',
+    text: 'HTML, CSS, Javascript',
+    link:'#',
+  },
+  {
+    src: books,
+    name: 'Bookshop',
+    text: 'HTML, CSS, Javascript',
+    link:'#',
+  },
+  {
+    src: shelter,
+    name: 'Shelter',
+    text: 'HTML, CSS, Javascript',
+    link:'#',
+  }
+]
+
+export const Projects: React.FC = () => {
   return (
-    <StyledProjects>
+    <S.Projects>
       <Container>
         <SectionTitle>My Portfolio</SectionTitle>
-        <ProjectMenu menuItems={projectItems}/>
-        <ProjectWrapper>
-          <Project src={english} name={'App For Learning Enlish for Kids'} text={'HTML, CSS, Javascript'} link='#'></Project>
-          <Project src={books} name={'Bookshop'} text={'HTML, CSS, Javascript'} link='#'></Project>
-          <Project src={shelter} name={'Shelter'} text={'HTML, CSS, Javascript'} link='#'></Project>
-        </ProjectWrapper>
+        <ProjectMenu menuItems={projectMenuItems}/>
+
+        <S.ProjectWrapper>
+
+          {projectData.map((project, index: number) => {
+            return (
+              <Project src={project.src} name={project.name} text={project.text} link={project.link} key={index}></Project>
+            )
+          })}
+
+        </S.ProjectWrapper>
+        
         <Button styleType={'outlined'} type={'button'}>More  Projects</Button>
       </Container>
-    </StyledProjects>
+    </S.Projects>
   );
 };
-
-const StyledProjects = styled.section`
-  button {
-    width: 175px;
-    height: 57px;
-  }
-
-  @media ${Thema.media.mobile} {
-    button {
-      width: 170px;
-      height: 50px;
-    }
-  }
-`
-
-const ProjectWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 50px;
-`
-
